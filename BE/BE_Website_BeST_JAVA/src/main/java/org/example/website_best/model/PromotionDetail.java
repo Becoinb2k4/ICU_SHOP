@@ -1,0 +1,34 @@
+package org.example.datn_website_best.model;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name = "PromotionDetail")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class PromotionDetail extends BaseEntity {
+
+    @Column
+    private Integer quantity;
+
+    @JsonBackReference(value = "productDetailPromotionDetailReference")
+    @ManyToOne
+    @JoinColumn(name = "id_productDetail", referencedColumnName = "id")
+    private ProductDetail productDetail;
+
+    @ManyToOne
+    @JoinColumn(name = "id_promotion", referencedColumnName = "id")
+    private Promotion promotion;
+
+}
