@@ -221,10 +221,3 @@ Fail khi:
 - [ ] Chuẩn bị sẵn dữ liệu mẫu để trình bày.
 
 ---
-
-## 12. Gợi ý cải thiện quy trình test
-- Viết test case theo bảng (ID, bước test, dữ liệu vào, kết quả mong đợi).
-- Tách môi trường `dev/test/prod`.
-- Dùng profile Spring (`application-test.properties`) cho test tự động.
-- Bổ sung test E2E (Cypress/Playwright) cho luồng checkout.
-
