@@ -1,4 +1,4 @@
-# Hướng dẫn test project ICU (đầy đủ)
+# Hướng dẫn test project 
 
 ## 1. Mục tiêu tài liệu
 Tài liệu này hướng dẫn bạn test toàn bộ project ICU gồm:
