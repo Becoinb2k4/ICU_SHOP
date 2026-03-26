@@ -6,7 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
 import { FaUserAlt, FaSignOutAlt, FaCartPlus, FaMicroblog } from 'react-icons/fa';
-import logoPage from './logoPage.jpg';
+import logoPage from './logoPage.png';
+import userIcon from './userIcon.png';
 import { getAccountLogin } from '../../../Service/ApiAccountService';
 import { useDispatch } from 'react-redux';
 import './header.scss';
@@ -71,12 +72,13 @@ function Header() {
                         {account ? (
                             <Dropdown align="end">
                                 <Dropdown.Toggle as="a" href="#" className="d-flex text-dark align-items-center">
-                                    <p style={{ fontSize: '16px' }} className="m-0">Hi, {account.name}</p>
+                                    <p style={{ fontSize: '16px' }} className="m-0">{account.name}</p>
                                     <img
-                                        src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                                        alt="Avatar"
+                                        src={userIcon}
+                                        alt="User"
                                         className="rounded-circle ms-2"
                                         height="40"
+                                        width="40"
                                     />
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>
@@ -105,10 +107,11 @@ function Header() {
                                     </Link>
                                     <Dropdown.Toggle as="div" className="d-flex align-items-center">
                                         <img
-                                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                                            alt="Avatar"
+                                            src={userIcon}
+                                            alt="User"
                                             className="rounded-circle"
                                             height="30"
+                                            width="30"
                                         />
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu>
