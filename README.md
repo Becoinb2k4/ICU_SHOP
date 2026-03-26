@@ -8,7 +8,7 @@ Tài liệu này hướng dẫn bạn test toàn bộ project ICU gồm:
 
 ---
 
-# account: tai khoan admin cung co the dat hang
+# Account: Tài khoản admin cũng có thể đặt hàng
     Tài khoản admin: Admin@gmail.com
     Mật khẩu admin: 1
 
